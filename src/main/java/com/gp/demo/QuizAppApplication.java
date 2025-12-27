@@ -1,13 +1,13 @@
-package com.gp.demo;
+    package com.gp.demo;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+    import org.springframework.boot.SpringApplication;
+    import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
-public class QuizAppApplication {
+    @SpringBootApplication
+    public class QuizAppApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(QuizAppApplication.class, args);
-	}
+        public static void main(String[] args) {
+            SpringApplication.run(QuizAppApplication.class, args);
+        }
 
-}
+    }
