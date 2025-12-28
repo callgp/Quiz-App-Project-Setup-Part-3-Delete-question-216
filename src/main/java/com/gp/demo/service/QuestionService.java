@@ -24,4 +24,20 @@ public class QuestionService {
          questionDao.save(question);
          return "success";
     }
+
+    public Question updateQuestion(Integer id, Question updatedQuestion) {
+        Question existing = questionDao.findById(id)
+                .orElseThrow(() -> new RuntimeException("Question not found"));
+
+        existing.setCategory(updatedQuestion.getCategory());
+        existing.setDifficultylevel(updatedQuestion.getDifficultylevel());
+        existing.setOption1(updatedQuestion.getOption1());
+        existing.setOption2(updatedQuestion.getOption2());
+        existing.setOption3(updatedQuestion.getOption3());
+        existing.setOption4(updatedQuestion.getOption4());
+        existing.setQuestionTitle(updatedQuestion.getQuestionTitle());
+        existing.setRightAnswer(updatedQuestion.getRightAnswer());
+
+        return questionDao.save(existing);
+    }
 }

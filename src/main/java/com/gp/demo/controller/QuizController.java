@@ -29,4 +29,8 @@ public class QuizController {
         return questionService.addQuestion(question);
        // return "success";
     }
+    @PutMapping("{id}")
+    public Question updateQuestion(@PathVariable Integer id, @RequestBody Question updatedQuestion) {
+        return questionService.updateQuestion(id, updatedQuestion);
+    }
 }
