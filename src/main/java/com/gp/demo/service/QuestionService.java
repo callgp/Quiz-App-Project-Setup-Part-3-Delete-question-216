@@ -40,4 +40,8 @@ public class QuestionService {
 
         return questionDao.save(existing);
     }
+
+    public void deleteQuestion(Integer id) {
+        questionDao.deleteById(id);
+    }
 }

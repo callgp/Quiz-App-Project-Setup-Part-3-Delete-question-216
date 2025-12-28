@@ -33,4 +33,10 @@ public class QuizController {
     public Question updateQuestion(@PathVariable Integer id, @RequestBody Question updatedQuestion) {
         return questionService.updateQuestion(id, updatedQuestion);
     }
+
+    @DeleteMapping("/{id}")
+    public String deleteQuestion(@PathVariable Integer id) {
+        questionService.deleteQuestion(id);
+        return "Question deleted successfully";
+    }
 }
